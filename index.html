@@ -1,100 +1,72 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Chase's Resume</title>
-        <link rel="stylesheet" href="styles.css">
-        <style>
-            body {
-                background-color: rgb(213, 129, 129);
-            }
-            .Firstp p {
-                color: rgb(0, 0, 0);
-                padding: 0px;
-                margin: 0px;
-                text-align: center;
-                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-                font-size: 100%;
-            }
-            .Firstp h6 {
-                font-size: 150%;
-                color: blue;
-                text-align: center;
-                padding: 10px;
-                margin: 20px;
-            }
-            .boxservices {
-                color: rgb(255, 255, 255);
-                background: brown;
-                padding: 60px;
-            }
-            .boxservices div {
-                background: blue;
-                padding: 0;
-                border-radius: 3px;
-            }
-            div:first-child {
-                margin-left: 30px;
-                background: rgb(52, 27, 27);
-                padding: 0px;
-            }
-            /* Header */
-            header {
-                background: url("Images/MainBackgroundScotty1.jpg") no-repeat center center;
-                background-size: cover;
-                height: 400px; /* Adjust height as needed */
-                border-top: 5px solid black;
-                border-bottom: 5px solid black;
-                position: relative;
-                
-            }
-            .TopWhite {
-                padding: 50px;
-            }
-            @media screen and (max-width: 600px) {
-            header {
-                background-size: contain; /* Ensures the entire image is visible */
-                background-position: center; /* Center the image in the header */
-                background-repeat: no-repeat; /* Prevent image from repeating */
-                height: auto; /* Adjust height to fit the image */
-                background-position: center 30%;
-                }
-            }
-            
-    
-        </style>
-    </head>
-    <body>
-        <section class="TopWhite">
-            <h6> This is my resume</h6>
-        </section>
-        <header class="parallax">
-
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Resume</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 60%;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #333;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .section h2 {
+            border-bottom: 2px solid #333;
+            padding-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Your Name</h1>
+            <p>Email: your.email@example.com | Phone: (123) 456-7890 | Location: City, Country</p>
         </header>
-        <section class="Firstp">
-            <h6>Professional Land Clearing & Site Development Services</h6>
-            <p>
-                Since 2016, our family-owned and operated business has been committed to excellence, providing comprehensive solutions for both residential and commercial projects. With years of experience, we have built a reputation for delivering high-quality services with a personal touch. <br/><br/>
-
-Our team of skilled professionals is equipped with state-of-the-art machinery and the expertise needed to handle any project size, ensuring that your land is prepared for its next phase of development. Whether you are planning to build a new home, expand your business, or simply need to clear and grade your property, we are here to deliver results that exceed your expectations. <br/> <br/>
-
-At Ayers Services LLC, we prioritize safety, efficiency, and environmental responsibility in all our operations. Fully insured, we understand the importance of maintaining a clean and safe worksite, and we take pride in our meticulous approach to debris removal and land management. Our services are tailored to meet your specific needs, providing you with a seamless and hassle-free experience from start to finish.
-
-Discover the difference of working with a company dedicated to transforming your land into a foundation for future success. Contact us today to learn more about how we can help you achieve your goals.
-            
-            </p>  
-            
+        
+        <section class="section">
+            <h2>Summary</h2>
+            <p>Brief summary about your skills, experience, and career goals.</p>
         </section>
-        
-        <footer>
-            <h1>813-517-6370</h1>
-            <figure class="ScottyLogo1">
-                <img src="Images/ScottyLogo2.png" alt="Scotty Logo">
-            </figure>
-            <p>&copy; 2025 by Chase Wink. All rights reserved.</p>
-        </footer>
-        
-        
-    </body>
-    
-</html>
 
+        <section class="section">
+            <h2>Experience</h2>
+            <h3>Job Title - Company Name</h3>
+            <p>Month Year - Present</p>
+            <ul>
+                <li>Responsibility 1</li>
+                <li>Responsibility 2</li>
+                <li>Responsibility 3</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>Education</h2>
+            <h3>Degree - University Name</h3>
+            <p>Month Year - Month Year</p>
+        </section>
+
+        <section class="section">
+            <h2>Skills</h2>
+            <ul>
+                <li>Skill 1</li>
+                <li>Skill 2</li>
+                <li>Skill 3</li>
+            </ul>
+        </section>
+    </div>
+</body>
+</html>
