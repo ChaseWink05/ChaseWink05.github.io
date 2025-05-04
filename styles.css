@@ -1,384 +1,180 @@
-/* General Styles */
+/* Reset & Base */
 body {
-    background-color: rgb(255, 255, 255);
-    color: black;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f9f9f9;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Container */
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 40px 20px;
+    background-color: #fff;
+    border-radius: 8px;
 }
 
 /* Header */
-header {
-    
-    background-size: cover;
-    height: 400px; /* Adjust height as needed */
-    border-top: 5px solid black;
-    border-bottom: 5px solid black;
-    position: relative;
-}
-
-/* Top Section */
-.TopWhite {
-    padding: 40px;
-    background-color: rgb(255, 255, 255);
-    color: black;
-    position: relative;
+.header-section {
     text-align: center;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    
+    padding: 40px 0 20px;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 30px;
 }
 
-/* Logo */
-.TopWhite figure {
-    background-image: url("Images/ScottyLogo2.png");
-    background-size: 100px;
-    position: relative;
-    margin: 0;
-    background-repeat: no-repeat;
-    flex-shrink: 0;
+.header-section h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: #222;
 }
 
-.TopWhite figure img {
-    width: 275px;
-    height: auto;
+.contact p {
+    margin: 6px 0;
+    font-size: 1rem;
+    color: #333;
 }
 
-/* Phone number box */
-.phone-box {
-    background-color: rgb(244, 170, 51);
-    color: white;
-    padding: 10px 20px;
-    border-radius: 25px;
-    font-size: 1.2em;
-    font-weight: bold;
-    margin-left: 20px; /* Adjust margin to the left */
-    margin-right: 20px; /* Adjust margin to the right */
-    flex-shrink: 0;
+.contact i {
+    margin-right: 8px;
+    color: #007BFF;
 }
 
-.phone-box:hover {
-    background-color: rgb(255, 255, 255);
-    color: rgb(244, 170, 51);
+.contact a {
+    color: #007BFF;
+    text-decoration: none;
 }
 
-/* Main navigation links */
-.TopWhite nav {
-    flex-grow: 1;
+.contact a:hover {
+    text-decoration: underline;
 }
 
-.TopWhite nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    text-align: center;
-}
-
-.TopWhite nav ul li {
-    display: inline-block;
+.social-links a {
     margin: 0 10px;
-    position: relative; /* Add this to help with positioning the dropdown */
+    font-weight: bold;
+    font-size: 1rem;
 }
 
-.TopWhite nav ul li a {
-    text-decoration: none;
-    color: black;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 110%;
-    position: relative;
+/* Nav Bar */
+nav {
+    background-color: #333;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-.TopWhite nav ul li a::before {
-    content: '';
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: black;
-    transition: width 0.3s ease-in-out;
-}
-
-.TopWhite nav ul li a:hover::before {
-    width: 100%;
-}
-
-/* Dropdown Menu */
-.dropdown {
-    font-size: 110%;
-    font-family: Arial, Helvetica, sans-serif;
-    position: relative; /* Ensure the dropdown content is positioned relative to this element */
-}
-
-.TopWhite nav ul li .dropdown span {
-    cursor: default;
-    color: inherit;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 110%;
-}
-
-.TopWhite nav ul li .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: white;
-    min-width: 150px; /* Increase the width of the dropdown */
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
-    left: 50%;
-    transform: translateX(-50%);
-    top: 100%; /* Position it directly below the parent */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
     padding: 0;
-    flex-direction: column;
 }
 
-.TopWhite nav ul li .dropdown-content li {
-    padding: 0;
-    display: block;
+nav ul li {
+    margin: 0 10px;
 }
 
-.TopWhite nav ul li .dropdown-content li a {
-    color: black;
+nav ul li a {
     text-decoration: none;
-    display: block;
-    padding: 10px; /* Increase padding for larger clickable area */
-    text-align: center;
-    font-size: 16px;
-    background-color: white;
-    position: relative;
+    color: #fff;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 10px;
+    background-color: #444;
+    transition: all 0.3s ease;
 }
 
-.TopWhite nav ul li .dropdown-content li a::before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: black;
-    transition: width 0.3s ease-in-out;
+nav ul li a:hover {
+    background-color: #555;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
 }
 
-.TopWhite nav ul li .dropdown-content li a:hover::before {
-    width: 100%;
+/* Headings */
+h1, h2, h5 {
+    color: #222;
 }
 
-.TopWhite nav ul li .dropdown-content li a:hover {
-    background-color: #ddd;
+h2 {
+    border-bottom: 2px solid #007BFF;
+    padding-bottom: 5px;
+    scroll-margin-top: 100px;
+    margin-top: 80px;
+    font-size: 1.8em;
 }
-
-.TopWhite nav ul li.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-
-
-
-/* Gallery start */
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 10px;
-    padding: 20px;
-}
-
-.gallery-item { 
-    overflow: hidden;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    position: relative;
-}
-
-.gallery-item img {
-    width: 100%;
-    height: 100%;
-    display: block;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-}
-
-.gallery-item img:hover {
-    transform: scale(1.05);
-}
-/* Gallery end */
 
 /* Footer */
 footer {
-    background: black;
-    padding: 20px;
     text-align: center;
-    color: white;
-    position: relative;
-    min-height: 150px;
+    padding: 20px;
+    background-color: #f2f2f2;
+    margin-top: 40px;
+    font-size: 0.9em;
+    color: #555;
 }
 
-/* Scotty Logo */
-footer .ScottyLogo1 {
-    width: 100px;
-    height: auto;
-    position: relative;
-    top: 20px;
-    left: 48%;
-    transform: translateX(-50%);
+/* Skills */
+.skills-list {
+    list-style: none;
+    padding-left: 0;
 }
 
-footer .ScottyLogo1 img {
-    width: 100%;
-    height: auto;
+.skills-list li {
+    margin-bottom: 10px;
+    line-height: 1.5;
 }
 
-/* Copyright Text */
-footer p {
-    position: relative;
-    top: 30px;
+/* Projects */
+.project {
+    margin-bottom: 30px;
+    padding: 20px;
+    border-left: 4px solid #007BFF;
+    background-color: #fefefe;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
 }
 
-/* Phone Number on the footer */
-footer h1 {
-    position: absolute;
-    left: 2%;
-    bottom: 13%;
-    font-size: 150%;
+.project h5 {
+    margin: 0 0 8px;
+    font-size: 1.3em;
+    color: #007BFF;
 }
 
-/* Facebook logo */
-.facebook-logo {
-    width: 45px;
-    height: 45px;
-    overflow: hidden;
-    border-radius: 50%;
-    background: none;
-    position: absolute;
-    top: 15px;
-    right: 19px;
+.project p {
+    margin: 0 0 10px;
 }
 
-.facebook-logo img {
-    width: 100%;
-    height: auto;
-}
- 
-/* Tiktok logo */
-.Tiktok-logo {
-    width: 45px;
-    height: 45px;
-    overflow: hidden;
-    border-radius: 50%;
-    background: none;
-    position: absolute;
-    top: 80px;
-    right: 20px;
+.project ul {
+    padding-left: 20px;
+    margin: 0;
 }
 
-.Tiktok-logo img {
-    width: 100%;
-    height: auto;
-} 
-
-
-
-/* Media Queries */
-@media screen and (max-width: 1050px) {
-    .TopWhite {
-        flex-direction: column;
-        padding: 20px;
-    }
-
-    .phone-box {
-        order: 3; /* Ensure phone box comes after nav */
-        margin-left: 10px; /* Adjust margin as needed */
-        margin-right: 0; /* Remove right margin */
-    }
-
-    /* Ensure dropdown menu is directly below Services on smaller screens */
-    .TopWhite nav ul li .dropdown-content {
-        left: 50%; /* Align the dropdown with the center of the parent */
-        transform: translateX(-50%);
-        top: 100%; /* Position it directly below the parent */
-    }
-
-    /* Footer adjustments */
-    footer {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 20px;
-        text-align: center;
-        color: white;
-        position: relative;
-        min-height: auto;
-    }
- 
-    footer .ScottyLogo1 {
-        position: relative;
-        top: 0;
-        left: 0;
-        transform: none;
-        margin-bottom: 10px;
-    }
-
-    footer p {
-        position: relative;
-        top: 0;
-        margin-bottom: 10px;
-    }
-
-    footer h1 {
-        position: relative;
-        left: 0;
-        bottom: 0;
-        font-size: 120%;
-        margin-bottom: 10px;
-        text-decoration: none;
-    }
-
-    .facebook-logo {
-        position: relative;
-        top: 0;
-        right: 0;  
-        margin-bottom: 10px;
-    }
-
-    .Tiktok-logo {
-        position: relative;
-        top: 0;
-        right: 0;
-        margin-bottom: 10px;
-    }
-    
-
-    .TopWhite ul{
-        font-size: 250%;
-    }
-    .FlexContainer{
-        flex-direction: column;
-        align-items:center;
-        text-align: center
-    }
-    
+.project li {
+    margin-bottom: 6px;
 }
-/* Mobile adjustments */
-/* Adjust the header for mobile screens */
-@media screen and (max-width: 600px) {
-    header {
-        background-size: contain; /* Ensures the entire image is visible */
-        background-position: center; /* Center the image in the header */
-        background-repeat: no-repeat; /* Prevent image from repeating */
-        height: auto; /* Adjust height to fit the image */
-    }
-    
+
+.project a {
+    color: #007BFF;
+    text-decoration: none;
 }
-@media screen and (min-width: 1060px){
-    /* Parallax effect for the header photo */
-        .parallax {
-    
-        min-height: 250px;
-        background-attachment: fixed;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
+
+html {
+    scroll-behavior: smooth;
+}
+
+@media print {
+  .page-break {
+    page-break-before: always;
+  }
 }
 
 
+.project a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
